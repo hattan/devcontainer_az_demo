@@ -1,0 +1,16 @@
+{
+	"name": "Demo",
+	"postCreateCommand": "bash /home/vscode/.local/postlaunch.sh",
+	"workspaceFolder" : "/home/vscode/work",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/work,type=bind,consistency=delegated",	
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { "VARIANT": "focal" }
+	},
+
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+  	"extensions": ["HashiCorp.terraform","mikestead.dotenv"],
+	"remoteUser": "vscode"
+}
